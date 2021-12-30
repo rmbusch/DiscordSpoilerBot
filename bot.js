@@ -1,4 +1,8 @@
 require('dotenv').config()
+const express = require('express');
+const app = express();
+
+const port = process.env.PORT || 3000;
 
 const Discord = require('discord.js');
 const client = new Discord.Client({intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_WEBHOOKS"]});
@@ -24,3 +28,5 @@ client.on('channelCreate', channel => {
     }
 })
 client.login(process.env.BOT_TOKEN);
+
+app.listen(port, () => console.log('Tom Holland is listening on port ${port}!'));
