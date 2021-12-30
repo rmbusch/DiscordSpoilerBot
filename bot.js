@@ -5,6 +5,7 @@ const client = new Discord.Client({intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_
 
 client.on('ready', () => {
     client.user.setActivity("Spider-Man: Miles Morales");
+    console.log("Tom Holland Bot online and ready!");
 });
 
 client.on('channelCreate', channel => {
