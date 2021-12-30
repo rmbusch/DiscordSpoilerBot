@@ -31,4 +31,4 @@ client.login(process.env.BOT_TOKEN);
 
 //app.listen(port, () => console.log('Tom Holland is listening on port ${port}!'));
 
-//process.exit(0);
+process.exit(0);
