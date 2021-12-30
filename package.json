@@ -4,7 +4,7 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "start": "forever start bot.js",
+    "start": "pm2 start bot.js",
     "devStart": "nodemon bot.js"
   },
   "keywords": [],
@@ -14,7 +14,7 @@
     "discord.js": "^13.5.0",
     "dotenv": "^10.0.0",
     "nodemon": "^2.0.15",
-    "forever":"^4.0.1"
+    "pm2":"^5.1.2"
   },
   "engines": { 
     "node": ">=14.0.0", 
