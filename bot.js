@@ -14,14 +14,14 @@ client.on('ready', () => {
 
 client.on('channelCreate', channel => {
     if (channel.parent.name.includes("Spoiler")) {
-        channel.send("Creating spoiler thread...").then(newMsg => {
+        channel.send("Creating " + channel.name + " spoiler thread...").then(newMsg => {
             newMsg.startThread({
                 name: channel.name + " SPOILERS",
                 autoArchiveDuration: 1440,
                 reason: 'Here there be spoilers!'
             }).then(newThread => {
                 newThread.send("Thread created.  SPOIL AWAY!");
-                channel.send("Spoiler thread created. \n\nENTER AT YOUR OWN RISK. \n\nHere there be spoilers.");
+                channel.send(channel.name + " spoiler thread created. \n\nENTER AT YOUR OWN RISK. \n\nHere there be spoilers.");
             })
         })
 
@@ -29,4 +29,4 @@ client.on('channelCreate', channel => {
 })
 client.login(process.env.BOT_TOKEN);
 
-app.listen(port, () => console.log('Tom Holland is listening on port %s!' % port));
+app.listen(port, () => console.log('Tom Holland is listening on port ' + port + '!'));
